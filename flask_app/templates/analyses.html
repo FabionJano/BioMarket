@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/analyses.css') }}">
+    <title>Bio Market</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyses">Analyses</a></li>
+            <li><a href="/partners">Our Partners</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/client/orderPage">Order</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            {% if loggedAdmin == admin %}
+            <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div>
+        <h3>Here are the results of product's analyses</h3>
+        <table>
+            <th>
+                <tr>
+                    <td>Products</td>
+                    <td>Pesticides</td>
+                    <td>Is it allowed?</td>
+                    <td>Allowed amount(mg)</td>
+                    <td>Constated amount(mg)</td>
+                    <td>Date of control</td>
+                    {% if loggedAdmin == admin %}
+                    <td>Options</td>
+                    {% endif %}
+                </tr>
+            </th>
+            <tbody>
+                {% for analyse in analyses %}
+                <tr>
+                    <td>{{ analyse.product_name}}</td>
+                    <td>{{ analyse.pesticide}}</td>
+                    <td>{{ analyse.allowed}}</td>
+                    <td>{{ analyse.allowedAmount}}</td>
+                    <td>{{ analyse.constatedAmount}}</td>
+                    <td>{{ analyse.control}}</td>
+                    {% if loggedAdmin == admin %}
+                    <td>
+                        <a href="/edit/analyse/{{analyse.id}}">Edit</a> <a href="/delete/analyse/{{analyse.id}}">Delete</a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <Address>Berat, Albania</Address>
+        <p>Contact: (355)12345678</p>
+        <p>Email: biomarket@gmail.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/homepage.css') }}">
+    <title>Bio Market</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyses">Analyses</a></li>
+            <li><a href="/partners">Our Partners</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/client/orderPage">Order</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            {% if loggedAdmin == admin %}
+            <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <main>
+        <p class="entry">
+            Have you ever imagined fried potatoes without ketchup, pizzas without tomatoe sausce or chips with black points????? <br>
+            <span>...You don't have to imagine it because here in Bio Market is our responsibility to take care that above scenarios won't happen.</span>
+        </p>
+        <div class="history">
+            <h2>How all this started???</h2>
+            <p>
+                Bio Market has started as a small family business more 30 years ago, but the begginings were not so good because the market was not so open as today. <br>
+                You may wonder how we went from a small business to a big one that even exports outside of the country. <br>
+                This was able only by hard work from our side and trust from the local farmers and clients.
+            </p>
+            <img src="{{url_for('static', filename='/images/farm.jpg')}}">
+        </div>
+        <div class="offer">
+            <h2>But what we offer here?</h2>
+            <h4>We collect fruits and vegetables from locals in good prices for both parts</h4>
+            <h4>We make analyses of the products in our high-tehnologies labs</h4>
+            <h4>If products are within standarts we store them in our warehouse</h4>
+            <h4>Than we take orders from our partners inside or outside the country</h4>
+            <h4>You could came to take the products here or we could deliver them to your location... but this will add some costs.</h4>
+            <h4>We are open from Monday to Friday, but during late spring and summer we work Monday to Saturday.</h4>
+            <img class="vegetables" src="{{url_for('static', filename='/images/vegetables.jpg')}}">
+            <img class="farmers" src="{{url_for('static', filename='/images/farmers.jpg')}}">
+        </div>
+    </main>
+    <footer id="footer">
+        <Address>Berat, Albania</Address>
+        <p>Contact: (355)12345678</p>
+        <p>Email: biomarket@gmail.com</p>
+    </footer>
+</body>
+</html>

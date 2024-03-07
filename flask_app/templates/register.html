@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/register.css') }}">
+    <title>Bio Market</title>
+</head>
+
+<body>
+    <div class="content">
+        <h2>It seems like you are a new user, you could register below:</h2>
+        <form action="/register" method="post">
+            <div class="first_name">
+                <label for="first_name">First Name :</label>
+                <input type="text" name="first_name" id="first_name">
+                {% with messages = get_flashed_messages(category_filter=["nameRegister"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="last_name">
+                <label for="last_name">Last Name :</label>
+                <input type="text" name="last_name" id="last_name">
+                {% with messages = get_flashed_messages(category_filter=["last_nameRegister"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="customer">
+                <label for="customer">Your Company/Bussiness Name :</label>
+                <input type="text" name="customer" id="customer">
+                {% with messages = get_flashed_messages(category_filter=["bussiness_Register"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="email">
+                <label for="email">Email Address :</label>
+                <input type="email" name="email" id="email">
+                {% with messages = get_flashed_messages(category_filter=["emailRegister"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="password">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password">
+                {% with messages = get_flashed_messages(category_filter=["passwordRegister"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="confirmpassword">
+                <label for="confirmpassword">Confirm Password :</label>
+                <input type="password" name="confirmpassword" id="confirmpassword">
+                {% with messages = get_flashed_messages(category_filter=["passwordConfirm"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <button type="submit">Register</button>
+            {% with messages = get_flashed_messages(category_filter=["clientRegister"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+        </form>
+        <div class="log">
+            <h3>Already an user?</h3>
+            <button><a href="/loginPage">LogIn</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

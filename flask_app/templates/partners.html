@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/partners.css') }}">
+    <title>Bio Market</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyses">Analyses</a></li>
+            <li><a href="/partners">Our Partners</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/client/orderPage">Order</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            {% if loggedAdmin == admin %}
+            <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <h3>We have a lot of partners in Albania and around the Europe but we want to highlight some of them</h3>
+    <div class="partners">
+        <div class="kfc">
+            <img src="{{url_for('static', filename='/images/kfc.png')}}">
+            <p>We are proud to be the partner of KFC in Albania since they first came here in 2016. Together we take care to serve to the clients the best local grown potatoes and the ketchup made from our tomatoes. We are looking forward to more years of this cooperation.</p>
+        </div>
+        <div class="opa">
+            <img src="{{url_for('static', filename='/images/opa.png')}}">
+            <p>We are proud to be the partner of OPA in Albania since they first came here in 2019. Together we take care to serve to the clients the best local grown potatoes and the ketchup made from our tomatoes. We are looking forward to more years of this cooperation.</p>
+        </div>
+        <div class="lidl">
+            <img src="{{url_for('static', filename='/images/lidl.png')}}">
+            <p>We also export lots of our fruits and vegetables to one of the biggest supermarket chains not only in Germany but in Europe. We are proud to cooperate with them.</p>
+        </div>
+        <div class="aldi">
+            <img class="photo" src="{{url_for('static', filename='/images/aldi.png')}}">
+            <p>We also export lots of our fruits and vegetables to one of the biggest supermarket chains not only in Germany but in Europe. We are proud to cooperate with them.</p>
+        </div>
+    </div>
+    <h4>States where we send:</h4>
+    <div class="flags">
+        <img src="{{url_for('static', filename='/images/albania.png')}}">
+        <img src="{{url_for('static', filename='/images/kosovo.png')}}">
+        <img src="{{url_for('static', filename='/images/germany.png')}}">
+        <img src="{{url_for('static', filename='/images/poland.png')}}">
+        <img src="{{url_for('static', filename='/images/belgium.png')}}">
+        <img src="{{url_for('static', filename='/images/nederland.png')}}">
+        <img src="{{url_for('static', filename='/images/italy.png')}}">
+        <img src="{{url_for('static', filename='/images/sweden.png')}}">
+        <img src="{{url_for('static', filename='/images/norway.png')}}">
+        <img src="{{url_for('static', filename='/images/finland.png')}}">
+        <img src="{{url_for('static', filename='/images/austria.jpg')}}">
+        <img src="{{url_for('static', filename='/images/swiss.png')}}">
+        <img src="{{url_for('static', filename='/images/serbia.png')}}">
+        <img src="{{url_for('static', filename='/images/hungary.png')}}">
+        <img src="{{url_for('static', filename='/images/czech.png')}}">
+        <img src="{{url_for('static', filename='/images/slovakia.png')}}">
+        <img src="{{url_for('static', filename='/images/macedonia.png')}}">
+    </div>
+    <footer>
+        <Address>Berat, Albania</Address>
+        <p>Contact: (355)12345678</p>
+        <p>Email: biomarket@gmail.com</p>
+    </footer>
+</body>
+</html>

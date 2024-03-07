@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/allOrders.css') }}">
+    <title>Bio Market</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyses">Analyses</a></li>
+            <li><a href="/partners">Our Partners</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/client/orderPage">Order</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            {% if loggedAdmin == admin %}
+            <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <h2>Here you could view all orders</h2>
+    <div>
+        <table>
+            <th>
+                <tr>
+                    <td>Order</td>
+                    <td>Customer</td>
+                    <td>Products</td>
+                    <td>Quantity(ton)</td>
+                    <td>Location</td>
+                    <td>Actions</td>
+                </tr>
+            </th>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.id}}</td>
+                    <td>{{order.customer}}</td>
+                    <td>{{order.product_name}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.location}}</td>
+                    <td>
+                        <a href="/delete_as_Admin/order/{{order.id}}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <Address>Berat, Albania</Address>
+        <p>Contact: (355)12345678</p>
+        <p>Email: biomarket@gmail.com</p>
+    </footer>
+</body>
+</html>

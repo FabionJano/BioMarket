@@ -1,0 +1,118 @@
+main{
+    height: fit-content;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+nav{
+    background-color: greenyellow;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+
+body{
+    background-image: url("/static/images/labi.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+form{
+    margin-left: 27%;
+    background-color: rgb(83, 188, 223);
+    width: 800px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 5%;
+    border-radius: 5%;
+}
+form .product_name{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+form .product_name label{
+    font-size: 20px;
+}
+form .product_name input{
+    margin-left: 30%;
+}
+form .pesticide{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+form .pesticide label{
+    font-size: 20px;
+}
+form .pesticide input{
+    margin-left: 28.5%;
+}
+form .allowed{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+form .allowed label{
+    font-size: 20px;
+}
+form .allowed input{
+    margin-left: 29%;
+}
+form .allowedAmount{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+form .allowedAmount label{
+    font-size: 20px;
+}
+form .allowedAmount input{
+    margin-left: 17.5%;
+}
+form .constatedAmount{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+form .constatedAmount label{
+    font-size: 20px;
+}
+form .constatedAmount input{
+    margin-left: 16.6%;
+}
+form .control{
+    margin-top: 2%;
+    margin-left: 20%;
+}
+form .control label{
+    font-size: 20px;
+}
+form .control input{
+    margin-left: 27%;
+}
+button{
+    position: relative;
+    top: 10%;
+    left: 45%;
+    font-size: 18px;
+    padding: 3px 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: greenyellow;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    color: blue;
+    position: relative;
+    top: 170px;
+}
+footer address{
+    margin-top: 1%;
+}

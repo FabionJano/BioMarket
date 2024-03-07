@@ -1,0 +1,67 @@
+main{
+    height: fit-content;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+nav{
+    background-color: greenyellow;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+
+body{
+    background-image: url("/static/images/labi.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+table{
+    background-color: aliceblue;
+    position: relative;
+    left: 30%;
+    margin-top: 2%;
+}
+table, td {
+    border: 1px solid;
+  }
+table td{
+    padding-left: 5px;
+    padding-right:5px;
+}
+table a{
+    text-decoration: none;
+    color: blue;
+}
+h3{
+    background-color: aliceblue;
+    position: relative;
+    width: fit-content;
+    left: 40%;
+    margin-top: 2%;
+    padding: 3px;
+    border-radius: 10%;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: greenyellow;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    color: blue;
+    position: relative;
+    top: 170px;
+}
+footer address{
+    margin-top: 1%;
+}

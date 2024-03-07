@@ -1,0 +1,91 @@
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+li{
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+nav{
+    background-color: greenyellow;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+}
+.entry{
+    font-size: 25px;
+    color: darkblue;
+}
+.entry span{
+    position: relative;
+    left: 25%;
+}
+body{
+    background-color: aquamarine;
+    padding: 0;
+    height: 800px;
+}
+.history{
+    height: 200px;
+}
+.history h2{
+    padding-left: 45%;
+    font-size: 21px;
+}
+.history p{
+    width: 1000px;
+    font-size: 18px;
+}
+.history img{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    left: 70%;
+    bottom: 110px;
+    border-radius: 5%;
+}
+.offer{
+    height: 350px;
+}
+.offer h2{
+    padding-left: 45%;
+    font-size: 21px;
+}
+.offer h4{
+    padding-left: 25%;
+    font-size: 18px;
+}
+.vegetables{
+    position: relative;
+    bottom: 260px;
+    width: 350px;
+    border-radius: 5%;
+}
+.farmers{
+    position: relative;
+    bottom: 260px;
+    left: 57%;
+    width: 350px;
+    border-radius: 5%;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: greenyellow;
+    padding-top: 0.2%;
+
+    color: blue;
+    position: relative;
+}
+footer address{
+    margin-top: 1%;
+}
+#footer{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}

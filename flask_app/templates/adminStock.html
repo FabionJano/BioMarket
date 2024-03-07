@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/adminStock.css') }}">
+    <title>Bio Market</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analyses">Analyses</a></li>
+            <li><a href="/partners">Our Partners</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/client/orderPage">Order</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            {% if loggedAdmin == admin %}
+            <li><a href="/admin">Admin Panel</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <form action="/admin/stock" method="post">
+        <div class="product_name">
+            <label for="product_name">Product :</label>
+            <input type="text" name="product_name" id="product_name">
+            {% with messages = get_flashed_messages(category_filter=["product_name"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+        </div>
+        <div class="quantity">
+            <label for="quantity">Quantity :</label>
+            <input type="number" name="quantity" id="quantity">
+            {% with messages = get_flashed_messages(category_filter=["quantity"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+        </div>
+        <div class="storage">
+            <label for="storage">Date of Storage :</label>
+            <input type="date" name="storage" id="storage">
+            {% with messages = get_flashed_messages(category_filter=["storage"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+        </div>
+        <div class="price">
+            <label for="price">Price :</label>
+            <input type="number" name="price" id="price">
+            {% with messages = get_flashed_messages(category_filter=["price"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+        </div>
+        <button type="submit">Add</button>
+    </form>
+    <footer>
+        <Address>Berat, Albania</Address>
+        <p>Contact: (355)12345678</p>
+        <p>Email: biomarket@gmail.com</p>
+    </footer>
+</body>
+</html>

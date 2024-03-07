@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}">
+    <title>Bio Market</title>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Admin, you could login here:</h2>
+        <form action="/login/admin" method="post">
+            <div class="email">
+                <label for="email">Email Address :</label>
+                <input type="email" name="email" id="email">
+                {% with messages = get_flashed_messages(category_filter=["emailLogin"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <div class="password">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password">
+                {% with messages = get_flashed_messages(category_filter=["passwordLogin"]) %} 
+                    {% if messages %} 
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %} 
+                    {% endif %} 
+                {% endwith %}
+            </div>
+            <button class="login" type="submit">LogIn</button>
+        </form>
+    </div>
+</body>
+
+</html>

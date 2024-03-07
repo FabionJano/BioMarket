@@ -1,0 +1,65 @@
+.content{
+    width: 680px;
+    height: 450px;
+    background-color: lightcyan;
+    position: relative;
+    left: 30%;
+    margin-top: 10%;
+    border-radius: 5%;
+}
+h2{
+    margin-left: 12%;
+    padding-top: 2%;
+    color: red;
+}
+body{
+    background-image: url("/static/images/green.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+form{
+    margin-left: 22%;
+    margin-top: 10%;
+}
+.email{
+    margin-top: 2%;
+}
+.password{
+    margin-top: 2%;
+}
+button{
+    margin-top: 5%;
+    margin-left: 23%;
+    font-size: 20px;
+    background-color: lightgreen;
+    color: royalblue;
+    border-radius: 5%;
+}
+form .email label{
+    font-size: 20px;
+    color: green;
+}
+form .password label{
+    font-size: 20px;
+    color: green;
+}
+form .email #email{
+    margin-left: 10%;
+}
+form .password #password{
+    margin-left: 17.5%;
+}
+.log{
+    padding-left: 25%;
+    margin-top: 5%;
+    display: flex;
+}
+.log h3{
+    font-size: 20px;
+    color: red;
+    margin-top: 2%;
+}
+a {
+    text-decoration: none;
+}
